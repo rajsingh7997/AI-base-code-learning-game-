@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Code Learning Quiz Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="game-container">
+    <header>
+      <h1>💻 Code Learning Quiz Game</h1>
+      <div class="info-bar">
+        <div class="language-select">
+          <label for="language">Language:</label>
+          <select id="language">
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+            <option value="htmlcss">HTML/CSS</option>
+            <option value="javascript">JavaScript</option>
+          </select>
+        </div>
+        <div class="score">Score: <span id="score">0</span></div>
+        <div class="timer">Time Left: <span id="time">60</span>s</div>
+      </div>
+    </header>
+
+    <section id="question-section">
+      <div class="question-box">
+        <h2 id="question-text">Loading question...</h2>
+        <ul id="options">
+          <!-- Options will be dynamically inserted here -->
+        </ul>
+      </div>
+      <button id="submit-btn" class="btn">Submit Answer</button>
+    </section>
+
+    <section id="result-section" class="hidden">
+      <div class="result-box">
+        <h2 id="result-text">Well Done!</h2>
+        <p>Your Score: <span id="final-score">0</span></p>
+        <button onclick="restartGame()" class="btn">Play Again</button>
+      </div>
+    </section>
+  </div>
+  <div class="timer" id="time"></div>
+  <div id="question-text"></div>
+  <ul id="options"></ul>
+  <button id="submit-btn">Submit</button>
+  <div id="score"></div>
+  <select id="language">
+    <option value="python">Python</option>
+    <option value="java">Java</option>
+    <option value="htmlcss">HTML/CSS</option>
+    <option value="javascript">JavaScript</option>
+  </select>
+  <div id="result-section" class="hidden">
+    Final Score: <span id="final-score"></span>
+  </div>
+  <div id="question-section"></div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
